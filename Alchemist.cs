@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Alchemist
 {
-    class Alchemist
+    public class Alchemist
     {
         public Alchemist(string cAlchemistName, int cAlchemistAge, int cAlchemistHealth, int cAlchemistMana, int cAlchemistHeight, int cAlchemistWeight, int cAlchemistAgility, int cAlchemistStrength, int cAlchemistDexterity, int cAlchemistIntelligence, int cAlchemistWisdom, int cAlchemistCharisma, string cAlchemistHelmet, string cAlchemistChestplate, string cAlchemistLeggings, string cAlchemistBoots, string cAlchemistGloves, string cAlchemistNecklace, string cAlchemistRing, string cAlchemistMeleeWeapon, string cAlchemistRangedWeapon, string cAlchemistBook, AlchemistElement cAlchemistElement, AlchemistRace cAlchemistRace)
         {
@@ -14,8 +14,8 @@ namespace Alchemist
             alchemistAge = cAlchemistAge;
             alchemistHealth = cAlchemistHealth;
             alchemistMana = cAlchemistMana;
-            alchemistHeight = cAlchemistHeight;
             alchemistWeight = cAlchemistWeight;
+            alchemistHeight = cAlchemistHeight;
             alchemistAgility = cAlchemistAgility;
             alchemistStrength = cAlchemistStrength;
             alchemistDexterity = cAlchemistDexterity;
