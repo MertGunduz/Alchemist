@@ -15,13 +15,15 @@ namespace Alchemist
     {
         static void Main(string[] args)
         {
-            // Console Options
+            // | Console Options |
             Console.Title = "Alchemist";
+
+            // | Alchemist |
 
             // Menu Variables
             string menuChoice;
 
-            // Console UI
+            // | Console UI |
             Console.WriteLine(" ");
             Console.WriteLine("  ▄▄▄       ██▓     ▄████▄   ██░ ██ ▓█████  ███▄ ▄███▓ ██▓  ██████ ▄▄▄█████▓", Color.FromArgb(143, 255, 194));
             Console.WriteLine(" ▒████▄    ▓██▒    ▒██▀ ▀█  ▓██░ ██▒▓█   ▀ ▓██▒▀█▀ ██▒▓██▒▒██    ▒ ▓  ██▒ ▓▒", Color.FromArgb(113, 228, 165));
@@ -52,9 +54,13 @@ namespace Alchemist
             // Sets The "menuChoice" To Lower.
             menuChoice = menuChoice.ToLower();
 
+            // Menu Choice
             if (menuChoice == "start game" || menuChoice == "startgame" || menuChoice == "start")
             {
-                // Start Game
+                // Clears Console & Makes The Game Menu
+                Console.Clear();
+
+                Console.WriteLine("");
             }
             else if (menuChoice == "create character" || menuChoice == "createcharacter" || menuChoice == "create")
             {
