@@ -8,9 +8,32 @@ namespace Alchemist
 {
     class Alchemist
     {
-        public Alchemist(string cAlchemistName, int cAlchemistAge, int cAlchemistHealth, int cAlchemistMana, int cAlchemistHeight, int cAlchemistWeight, int cAlchemistAgility, int cAlchemistStrength, int cAlchemistDexterity, int cAlchemistIntelligence, int cAlchemistWisdom, int cAlchemistCharisma, string cAlchemistHelmet, string cAlchemistChestplate, string cAlchemistLeggings, string cAlchemistBoots, string cAlchemistGloves, string cAlchemistNecklace, string cAlchemistRing, string cAlchemistMeleeWeapon, string cAlchemistRangedWeapon, string cAlchemistBook, AlchemistElement alchemistElement, AlchemistRace alchemistRace)
+        public Alchemist(string cAlchemistName, int cAlchemistAge, int cAlchemistHealth, int cAlchemistMana, int cAlchemistHeight, int cAlchemistWeight, int cAlchemistAgility, int cAlchemistStrength, int cAlchemistDexterity, int cAlchemistIntelligence, int cAlchemistWisdom, int cAlchemistCharisma, string cAlchemistHelmet, string cAlchemistChestplate, string cAlchemistLeggings, string cAlchemistBoots, string cAlchemistGloves, string cAlchemistNecklace, string cAlchemistRing, string cAlchemistMeleeWeapon, string cAlchemistRangedWeapon, string cAlchemistBook, AlchemistElement cAlchemistElement, AlchemistRace cAlchemistRace)
         {
-
+            alchemistName = cAlchemistName;
+            alchemistAge = cAlchemistAge;
+            alchemistHealth = cAlchemistHealth;
+            alchemistMana = cAlchemistMana;
+            alchemistHeight = cAlchemistHeight;
+            alchemistWeight = cAlchemistWeight;
+            alchemistAgility = cAlchemistAgility;
+            alchemistStrength = cAlchemistStrength;
+            alchemistDexterity = cAlchemistDexterity;
+            alchemistIntelligence = cAlchemistIntelligence;
+            alchemistWisdom = cAlchemistWisdom;
+            alchemistCharisma = cAlchemistCharisma;
+            alchemistHelmet = cAlchemistHelmet;
+            alchemistChestplate = cAlchemistChestplate;
+            alchemistLeggings = cAlchemistLeggings;
+            alchemistBoots = cAlchemistBoots;
+            alchemistGloves = cAlchemistGloves;
+            alchemistNecklace = cAlchemistNecklace;
+            alchemistRing = cAlchemistRing;
+            alchemistMeleeWeapon = cAlchemistMeleeWeapon;
+            alchemistRangedWeapon = cAlchemistRangedWeapon;
+            alchemistBook = cAlchemistBook;
+            alchemistRace = cAlchemistRace;
+            alchemistElement = cAlchemistElement;
         }
 
         public enum AlchemistElement
@@ -65,5 +88,9 @@ namespace Alchemist
         public string alchemistMeleeWeapon;
         public string alchemistRangedWeapon;
         public string alchemistBook;
+
+        // Alchemist Race & Element Data
+        AlchemistRace alchemistRace;
+        AlchemistElement alchemistElement;
     }
 }
