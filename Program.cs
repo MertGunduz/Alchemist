@@ -54,6 +54,8 @@ namespace Alchemist
             // Sets The "menuChoice" To Lower.
             menuChoice = menuChoice.ToLower();
 
+            Console.WriteLine(" "); // |-| Line Break |-|
+
             // Menu Choice
             if (menuChoice == "start game" || menuChoice == "startgame" || menuChoice == "start")
             {
@@ -64,7 +66,11 @@ namespace Alchemist
             }
             else if (menuChoice == "create character" || menuChoice == "createcharacter" || menuChoice == "create")
             {
-                // Character Creation Txt StreamWriting
+                Console.WriteLine(@"  ░                           ░ ", Color.FromArgb(88, 211, 143));
+                Console.WriteLine(@" /|\-------------------------/|\", Color.FromArgb(72, 194, 127));
+                Console.WriteLine(@" ||| Character Creation Menu |||", Color.FromArgb(58, 175, 111));
+                Console.WriteLine(@" \|/-------------------------\|/", Color.FromArgb(46, 150, 92));
+                Console.WriteLine(@"  ░                           ░ ", Color.FromArgb(34, 131, 77));
             }
             else if (menuChoice == "settings" || menuChoice == "sett" || menuChoice == "set")
             {

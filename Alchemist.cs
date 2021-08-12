@@ -8,10 +8,9 @@ namespace Alchemist
 {
     class Alchemist
     {
-        public Alchemist(string cAlchemistName, int cAlchemistAge, int cAlchemistHealth, int cAlchemistMana, int cAlchemistHeight, int cAlchemistWeight, int cAlchemistAgility, int cAlchemistStrength, int cAlchemistDexterity, int cAlchemistIntelligence, int cAlchemistWisdom, int cAlchemistCharisma, string cAlchemistHelmet, string cAlchemistChestplate, string cAlchemistLeggings, string cAlchemistBoots, string cAlchemistGloves, string cAlchemistNecklace, string cAlchemistRing, string cAlchemistMeleeWeapon, string cAlchemistRangedWeapon, string cAlchemistBook, AlchemistElement, AlchemistRace)
+        public Alchemist(string cAlchemistName, int cAlchemistAge, int cAlchemistHealth, int cAlchemistMana, int cAlchemistHeight, int cAlchemistWeight, int cAlchemistAgility, int cAlchemistStrength, int cAlchemistDexterity, int cAlchemistIntelligence, int cAlchemistWisdom, int cAlchemistCharisma, string cAlchemistHelmet, string cAlchemistChestplate, string cAlchemistLeggings, string cAlchemistBoots, string cAlchemistGloves, string cAlchemistNecklace, string cAlchemistRing, string cAlchemistMeleeWeapon, string cAlchemistRangedWeapon, string cAlchemistBook, AlchemistElement alchemistElement, AlchemistRace alchemistRace)
         {
-            alchemistName = cAlchemistName;
-            alchemistAge = cAlchemistAge;
+
         }
 
         public enum AlchemistElement
@@ -66,9 +65,5 @@ namespace Alchemist
         public string alchemistMeleeWeapon;
         public string alchemistRangedWeapon;
         public string alchemistBook;
-
-        // Alchemist Enum Data
-        public AlchemistElement alchemistElement;
-        public AlchemistRace alChemistRace;
     }
 }
