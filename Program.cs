@@ -26,9 +26,7 @@ namespace Alchemist
         static int mainAlchemistCharisma;
 
         // | Alchemist Enum Data |
-        static string mainAlchemistElement;
         static string mainAlchemistRace;
-        static Alchemist.AlchemistElement alchemistElement;
         static Alchemist.AlchemistRace alchemistRace;
 
         static void Main(string[] args)

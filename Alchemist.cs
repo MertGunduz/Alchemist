@@ -8,7 +8,7 @@ namespace Alchemist
 {
     public class Alchemist
     {
-        public Alchemist(string cAlchemistName, int cAlchemistAge, int cAlchemistHealth, int cAlchemistMana, int cAlchemistAttackDamage, int cAlchemistHeight, int cAlchemistWeight, int cAlchemistAgility, int cAlchemistStrength, int cAlchemistDexterity, int cAlchemistIntelligence, int cAlchemistWisdom, int cAlchemistCharisma, string cAlchemistHelmet, string cAlchemistChestplate, string cAlchemistLeggings, string cAlchemistBoots, string cAlchemistGloves, string cAlchemistNecklace, string cAlchemistRing, string cAlchemistMeleeWeapon, string cAlchemistRangedWeapon, string cAlchemistBook, AlchemistElement cAlchemistElement, AlchemistRace cAlchemistRace)
+        public Alchemist(string cAlchemistName, int cAlchemistAge, int cAlchemistHealth, int cAlchemistMana, int cAlchemistAttackDamage, int cAlchemistHeight, int cAlchemistWeight, int cAlchemistAgility, int cAlchemistStrength, int cAlchemistDexterity, int cAlchemistIntelligence, int cAlchemistWisdom, int cAlchemistCharisma, string cAlchemistHelmet, string cAlchemistChestplate, string cAlchemistLeggings, string cAlchemistBoots, string cAlchemistGloves, string cAlchemistNecklace, string cAlchemistRing, string cAlchemistMeleeWeapon, string cAlchemistRangedWeapon, string cAlchemistBook, AlchemistRace cAlchemistRace)
         {
             alchemistName = cAlchemistName;
             alchemistAge = cAlchemistAge;
@@ -34,18 +34,6 @@ namespace Alchemist
             alchemistRangedWeapon = cAlchemistRangedWeapon;
             alchemistBook = cAlchemistBook;
             alchemistRace = cAlchemistRace;
-            alchemistElement = cAlchemistElement;
-        }
-
-        public enum AlchemistElement
-        {
-            Earth,
-            Fire,
-            Water,
-            Air,
-            Darkness,
-            Light,
-            Nature
         }
 
         public enum AlchemistRace
@@ -90,8 +78,7 @@ namespace Alchemist
         public string alchemistRangedWeapon;
         public string alchemistBook;
 
-        // Alchemist Race & Element Data
+        // Alchemist Race Data
         AlchemistRace alchemistRace;
-        AlchemistElement alchemistElement;
     }
 }
