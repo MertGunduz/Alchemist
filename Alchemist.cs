@@ -8,12 +8,13 @@ namespace Alchemist
 {
     public class Alchemist
     {
-        public Alchemist(string cAlchemistName, int cAlchemistAge, int cAlchemistHealth, int cAlchemistMana, int cAlchemistHeight, int cAlchemistWeight, int cAlchemistAgility, int cAlchemistStrength, int cAlchemistDexterity, int cAlchemistIntelligence, int cAlchemistWisdom, int cAlchemistCharisma, string cAlchemistHelmet, string cAlchemistChestplate, string cAlchemistLeggings, string cAlchemistBoots, string cAlchemistGloves, string cAlchemistNecklace, string cAlchemistRing, string cAlchemistMeleeWeapon, string cAlchemistRangedWeapon, string cAlchemistBook, AlchemistElement cAlchemistElement, AlchemistRace cAlchemistRace)
+        public Alchemist(string cAlchemistName, int cAlchemistAge, int cAlchemistHealth, int cAlchemistMana, int cAlchemistAttackDamage, int cAlchemistHeight, int cAlchemistWeight, int cAlchemistAgility, int cAlchemistStrength, int cAlchemistDexterity, int cAlchemistIntelligence, int cAlchemistWisdom, int cAlchemistCharisma, string cAlchemistHelmet, string cAlchemistChestplate, string cAlchemistLeggings, string cAlchemistBoots, string cAlchemistGloves, string cAlchemistNecklace, string cAlchemistRing, string cAlchemistMeleeWeapon, string cAlchemistRangedWeapon, string cAlchemistBook, AlchemistElement cAlchemistElement, AlchemistRace cAlchemistRace)
         {
             alchemistName = cAlchemistName;
             alchemistAge = cAlchemistAge;
             alchemistHealth = cAlchemistHealth;
             alchemistMana = cAlchemistMana;
+            alchemistAttackDamage = cAlchemistAttackDamage;
             alchemistWeight = cAlchemistWeight;
             alchemistHeight = cAlchemistHeight;
             alchemistAgility = cAlchemistAgility;
@@ -52,20 +53,20 @@ namespace Alchemist
             Human,
             Elf,
             Demon,
-            Undead,
             Orc,
-            Lizardman,
-            Centaur,
-            Elemental
+            Lizardman
         }
 
         // Alchemist Personality Data
         public string alchemistName;
         public int alchemistAge;
-        public int alchemistHealth;
-        public int alchemistMana;
         public int alchemistHeight;
         public int alchemistWeight;
+
+        // Alchemist Combat Data
+        public int alchemistHealth;
+        public int alchemistMana;
+        public int alchemistAttackDamage;
 
         // Alchemist Attribute Data
         public int alchemistAgility;

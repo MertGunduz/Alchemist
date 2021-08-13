@@ -13,7 +13,7 @@ namespace Alchemist
     }
     class Program
     {
-        // | Alchemist |
+        // | Alchemist String & Int Data |
         static string mainAlchemistName;
         static int mainAlchemistAge;
         static int mainAlchemistWeight;
@@ -24,6 +24,10 @@ namespace Alchemist
         static int mainAlchemistIntelligence;
         static int mainAlchemistWisdom;
         static int mainAlchemistCharisma;
+
+        // | Alchemist Enum Data |
+        static string mainAlchemistElement;
+        static string mainAlchemistRace;
         static Alchemist.AlchemistElement alchemistElement;
         static Alchemist.AlchemistRace alchemistRace;
 
@@ -101,7 +105,62 @@ namespace Alchemist
 
             Console.WriteLine(" "); // |-| Line Break |-|
 
-            // Gets Alchemist Name  & Assigns It
+        // Gets Alchemist Race & Assigns It
+        AlchemistRace:
+            Console.WriteLine(@"  ░             ░ ", Color.FromArgb(143, 255, 194));
+            Console.WriteLine(@" /|\-----------/|\", Color.FromArgb(113, 228, 165));
+            Console.WriteLine(@" |||   Human   |||", Color.FromArgb(88, 211, 143));
+            Console.WriteLine(@" |||    Elf    |||", Color.FromArgb(72, 194, 127));
+            Console.WriteLine(@" |||   Demon   |||", Color.FromArgb(58, 175, 111));
+            Console.WriteLine(@" |||    Orc    |||", Color.FromArgb(46, 150, 92));
+            Console.WriteLine(@" ||| Lizardman |||", Color.FromArgb(34, 131, 77));
+            Console.WriteLine(@" \|/-----------\|/", Color.FromArgb(24, 109, 62));
+            Console.WriteLine(@"  ░             ░ ", Color.FromArgb(16, 88, 48));
+
+            Console.WriteLine(" "); // |-| Line Break |-|
+
+            // Gets Alchemist Race & Assigns It
+            Console.Write(" Alchemist Race -> ", Color.FromArgb(113, 228, 165));
+            mainAlchemistRace = Console.ReadLine();
+
+            // Sets The MainAlchemistRace To Lower
+            mainAlchemistRace = mainAlchemistRace.ToLower();
+
+            Console.WriteLine(" "); // |-| Line Break |-|
+
+            if (mainAlchemistRace == "human")
+            {
+                alchemistRace = Alchemist.AlchemistRace.Human;
+            }
+            else if (mainAlchemistRace == "elf")
+            {
+                alchemistRace = Alchemist.AlchemistRace.Elf;
+            }
+            else if (mainAlchemistRace == "demon")
+            {
+                alchemistRace = Alchemist.AlchemistRace.Demon;
+            }
+            else if (mainAlchemistRace == "orc")
+            {
+                alchemistRace = Alchemist.AlchemistRace.Orc;
+            }
+            else if (mainAlchemistRace == "lizardman")
+            {
+                alchemistRace = Alchemist.AlchemistRace.Lizardman;
+            }
+            else
+            {
+                Console.WriteLine(@"  ░                              ░ ", Color.FromArgb(143, 255, 194));
+                Console.WriteLine(@" /|\----------------------------/|\", Color.FromArgb(113, 228, 165));
+                Console.WriteLine(@" ||| Please Select A Valid Race |||", Color.FromArgb(88, 211, 143));
+                Console.WriteLine(@" \|/----------------------------\|/", Color.FromArgb(72, 194, 127));
+                Console.WriteLine(@"  ░                              ░ ", Color.FromArgb(58, 175, 111));
+
+                Console.WriteLine(" "); // |-| Line Break |-|
+                goto AlchemistRace;
+            }
+
+            // Gets Alchemist Name & Assigns It
             Console.Write(" Alchemist Name -> ", Color.FromArgb(88, 211, 143));
             mainAlchemistName = Console.ReadLine();
 
@@ -113,15 +172,15 @@ namespace Alchemist
 
             Console.WriteLine(" "); // |-| Line Break |-|
 
-            // Gets The Weight & Assigns It
-            Console.Write(" Alchemist Weight -> ", Color.FromArgb(58, 175, 111));
-            mainAlchemistWeight = Convert.ToInt32(Console.ReadLine());
-
-            Console.WriteLine(" "); // |-| Line Break |-|
-
             // Gets The Height & Assings It
             Console.Write(" Alchemist Height -> ", Color.FromArgb(46, 150, 92));
             mainAlchemistHeight = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine(" "); // |-| Line Break |-|
+
+            // Gets The Weight & Assigns It
+            Console.Write(" Alchemist Weight -> ", Color.FromArgb(58, 175, 111));
+            mainAlchemistWeight = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine(" "); // |-| Line Break |-|
 
@@ -217,7 +276,7 @@ namespace Alchemist
 
                 Console.WriteLine(" "); // |-| Line Break |-|
 
-                goto AlchemistDexterityAttribute; 
+                goto AlchemistDexterityAttribute;
             }
 
         // Gets The Intelligence Attribute & Assigns It
@@ -382,6 +441,6 @@ namespace Alchemist
 
                 Console.WriteLine(" "); // |-| Line Break |-|
             }
-        } 
+        }
     }
 }
