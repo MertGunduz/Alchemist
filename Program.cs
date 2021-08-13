@@ -12,7 +12,7 @@ namespace Alchemist
         Settings
     }
     class Program
-    {
+    {   
         // | Alchemist String & Int Data |
         static string mainAlchemistName;
         static int mainAlchemistAge;
@@ -456,6 +456,8 @@ namespace Alchemist
                 Console.WriteLine(@"  ░                     ░ ", Color.FromArgb(58, 175, 111));
 
                 Console.WriteLine(" "); // |-| Line Break |-|
+
+                // Alchemist Constructor Creation
 
                 // Creates A Directory (Alchemist)
                 string dirPath = @"C:\Alchemist";

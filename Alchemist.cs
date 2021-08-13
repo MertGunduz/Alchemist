@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Alchemist
 {
-    public class Alchemist
+    public class Alchemist 
     {
-        public Alchemist(string cAlchemistName, int cAlchemistAge, int cAlchemistHealth, int cAlchemistMana, int cAlchemistAttackDamage, int cAlchemistHeight, int cAlchemistWeight, int cAlchemistAgility, int cAlchemistStrength, int cAlchemistDexterity, int cAlchemistIntelligence, int cAlchemistWisdom, int cAlchemistCharisma, string cAlchemistHelmet, string cAlchemistChestplate, string cAlchemistLeggings, string cAlchemistBoots, string cAlchemistGloves, string cAlchemistNecklace, string cAlchemistRing, string cAlchemistMeleeWeapon, string cAlchemistRangedWeapon, string cAlchemistBook, AlchemistRace cAlchemistRace)
+        public Alchemist(string cAlchemistName, int cAlchemistAge, int cAlchemistHealth, int cAlchemistMana, int cAlchemistAttackDamage, int cAlchemistHeight, int cAlchemistWeight, int cAlchemistAgility, int cAlchemistStrength, int cAlchemistDexterity, int cAlchemistIntelligence, int cAlchemistWisdom, int cAlchemistCharisma, Helmet cAlchemistHelmet, string cAlchemistChestplate, string cAlchemistLeggings, string cAlchemistBoots, string cAlchemistGloves, string cAlchemistNecklace, string cAlchemistRing, string cAlchemistMeleeWeapon, string cAlchemistRangedWeapon, string cAlchemistBook, AlchemistRace cAlchemistRace)
         {
             alchemistName = cAlchemistName;
             alchemistAge = cAlchemistAge;
@@ -65,7 +65,7 @@ namespace Alchemist
         public int alchemistCharisma;
 
         // Alchemist Armor Data
-        public string alchemistHelmet;
+        public Helmet alchemistHelmet;
         public string alchemistChestplate;
         public string alchemistLeggings;
         public string alchemistBoots;
