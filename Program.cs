@@ -19,7 +19,7 @@ namespace Alchemist
         static int mainAlchemistWeight;
         static int mainAlchemistHeight;
         static int mainAlchemistAgility;
-        static int mainAlchemistStrenght;
+        static int mainAlchemistStrength;
         static int mainAlchemistDexterity;
         static int mainAlchemistIntelligence;
         static int mainAlchemistWisdom;
@@ -102,25 +102,25 @@ namespace Alchemist
             Console.WriteLine(" "); // |-| Line Break |-|
 
             // Gets Alchemist Name  & Assigns It
-            Console.Write(" Alchemist Name -> ", Color.FromArgb(64, 17, 231));
+            Console.Write(" Alchemist Name -> ", Color.FromArgb(88, 211, 143));
             mainAlchemistName = Console.ReadLine();
 
             Console.WriteLine(" "); // |-| Line Break |-|
 
             // Gets Alchemist Age & Assigns It
-            Console.Write(" Alchemist Age -> ", Color.FromArgb(129, 149, 11));
+            Console.Write(" Alchemist Age -> ", Color.FromArgb(72, 194, 127));
             mainAlchemistAge = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine(" "); // |-| Line Break |-|
 
             // Gets The Weight & Assigns It
-            Console.Write(" Alchemist Weight -> ", Color.FromArgb(241, 186, 71));
+            Console.Write(" Alchemist Weight -> ", Color.FromArgb(58, 175, 111));
             mainAlchemistWeight = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine(" "); // |-| Line Break |-|
 
             // Gets The Height & Assings It
-            Console.Write(" Alchemist Height -> ", Color.FromArgb(92, 42, 62));
+            Console.Write(" Alchemist Height -> ", Color.FromArgb(46, 150, 92));
             mainAlchemistHeight = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine(" "); // |-| Line Break |-|
@@ -138,7 +138,7 @@ namespace Alchemist
             Console.WriteLine(@"  ░             ░ ", Color.FromArgb(143, 255, 194));
             Console.WriteLine(@" /|\-----------/|\", Color.FromArgb(113, 228, 165));
             Console.WriteLine(@" ||| Agi. -> " + mainAlchemistAgility + " |||", Color.FromArgb(88, 211, 143));
-            Console.WriteLine(@" ||| Str. -> " + mainAlchemistStrenght + " |||", Color.FromArgb(72, 194, 127));
+            Console.WriteLine(@" ||| Str. -> " + mainAlchemistStrength + " |||", Color.FromArgb(72, 194, 127));
             Console.WriteLine(@" ||| Dex. -> " + mainAlchemistDexterity + " |||", Color.FromArgb(58, 175, 111));
             Console.WriteLine(@" ||| Int. -> " + mainAlchemistIntelligence + " |||", Color.FromArgb(46, 150, 92));
             Console.WriteLine(@" ||| Wis. -> " + mainAlchemistWisdom + " |||", Color.FromArgb(34, 131, 77));
@@ -175,13 +175,13 @@ namespace Alchemist
         // Gets The Strength Attribute & Assigns It
         AlchemistStrengthAttribute:
             Console.Write(" Alchemist Strength -> ", Color.FromArgb(113, 228, 165));
-            mainAlchemistStrenght = Convert.ToInt32(Console.ReadLine());
+            mainAlchemistStrength = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine(" "); // |-| Line Break |-|
 
-            if (mainAlchemistStrenght <= 9)
+            if (mainAlchemistStrength <= 9)
             {
-                totalAttributePoints = totalAttributePoints - mainAlchemistStrenght;
+                totalAttributePoints = totalAttributePoints - mainAlchemistStrength;
             }
             else
             {
@@ -217,7 +217,7 @@ namespace Alchemist
 
                 Console.WriteLine(" "); // |-| Line Break |-|
 
-                goto AlchemistDexterityAttribute;
+                goto AlchemistDexterityAttribute; 
             }
 
         // Gets The Intelligence Attribute & Assigns It
@@ -292,20 +292,11 @@ namespace Alchemist
                 goto AlchemistCharismaAttribute;
             }
 
-            // Shows Points
-            Console.WriteLine(@"  ░                      ░  ", Color.FromArgb(143, 255, 194));
-            Console.WriteLine(@" /|\--------------------/|\ ", Color.FromArgb(113, 228, 165));
-            Console.WriteLine(@" ||| Total Points -> " + totalAttributePoints + " ||| ", Color.FromArgb(88, 211, 143));
-            Console.WriteLine(@" \|/--------------------\|/ ", Color.FromArgb(72, 194, 127));
-            Console.WriteLine(@"  ░                      ░  ", Color.FromArgb(58, 175, 111));
-
-            Console.WriteLine(" "); // |-| Line Break |-|
-
             // Shows Attributes
             Console.WriteLine(@"  ░             ░ ", Color.FromArgb(143, 255, 194));
             Console.WriteLine(@" /|\-----------/|\", Color.FromArgb(113, 228, 165));
             Console.WriteLine(@" ||| Agi. -> " + mainAlchemistAgility + " |||", Color.FromArgb(88, 211, 143));
-            Console.WriteLine(@" ||| Str. -> " + mainAlchemistStrenght + " |||", Color.FromArgb(72, 194, 127));
+            Console.WriteLine(@" ||| Str. -> " + mainAlchemistStrength + " |||", Color.FromArgb(72, 194, 127));
             Console.WriteLine(@" ||| Dex. -> " + mainAlchemistDexterity + " |||", Color.FromArgb(58, 175, 111));
             Console.WriteLine(@" ||| Int. -> " + mainAlchemistIntelligence + " |||", Color.FromArgb(46, 150, 92));
             Console.WriteLine(@" ||| Wis. -> " + mainAlchemistWisdom + " |||", Color.FromArgb(34, 131, 77));
@@ -313,10 +304,84 @@ namespace Alchemist
             Console.WriteLine(@" \|/-----------\|/", Color.FromArgb(16, 88, 48));
             Console.WriteLine(@"  ░             ░ ", Color.FromArgb(11, 61, 33));
 
+            Console.WriteLine(" "); // |-| Line Break |-|
+
             if (totalAttributePoints > 0)
             {
-                // Show The Points That Didn't Spent
+                // Shows Points
+                Console.WriteLine(@"  ░                      ░  ", Color.FromArgb(143, 255, 194));
+                Console.WriteLine(@" /|\--------------------/|\ ", Color.FromArgb(113, 228, 165));
+                Console.WriteLine(@" ||| Total Points -> " + totalAttributePoints + " ||| ", Color.FromArgb(88, 211, 143));
+                Console.WriteLine(@" \|/--------------------\|/ ", Color.FromArgb(72, 194, 127));
+                Console.WriteLine(@"  ░                      ░  ", Color.FromArgb(58, 175, 111));
+
+                Console.WriteLine(" "); // |-| Line Break |-|
+
+                Console.WriteLine(@"  ░                     ░ ", Color.FromArgb(143, 255, 194));
+                Console.WriteLine(@" /|\-------------------/|\", Color.FromArgb(113, 228, 165));
+                Console.WriteLine(@" ||| Spend Your Points |||", Color.FromArgb(88, 211, 143));
+                Console.WriteLine(@" \|/-------------------\|/", Color.FromArgb(72, 194, 127));
+                Console.WriteLine(@"  ░                     ░ ", Color.FromArgb(58, 175, 111));
+
+                Console.WriteLine(" "); // |-| Line Break |-|
+
+                Console.WriteLine(@"  ░                                      ░ ", Color.FromArgb(143, 255, 194));
+                Console.WriteLine(@" /|\------------------------------------/|\", Color.FromArgb(113, 228, 165));
+                Console.WriteLine(@" ||| Remained Points Has Randomly Given |||", Color.FromArgb(88, 211, 143));
+                Console.WriteLine(@" \|/------------------------------------\|/", Color.FromArgb(72, 194, 127));
+                Console.WriteLine(@"  ░                                      ░ ", Color.FromArgb(58, 175, 111));
+
+                Console.WriteLine(" "); // |-| Line Break |-|
+
+                // Sorting & Giving Remained Points
+                while (totalAttributePoints != 0)
+                {
+                    if (mainAlchemistAgility <= mainAlchemistStrength && mainAlchemistAgility <= mainAlchemistDexterity && mainAlchemistAgility <= mainAlchemistIntelligence && mainAlchemistAgility <= mainAlchemistWisdom && mainAlchemistAgility <= mainAlchemistCharisma)
+                    {
+                        mainAlchemistAgility++;
+                        totalAttributePoints--;
+                    }
+                    else if (mainAlchemistStrength <= mainAlchemistAgility && mainAlchemistStrength <= mainAlchemistDexterity && mainAlchemistStrength <= mainAlchemistIntelligence && mainAlchemistStrength <= mainAlchemistWisdom && mainAlchemistStrength <= mainAlchemistCharisma)
+                    {
+                        mainAlchemistStrength++;
+                        totalAttributePoints--;
+                    }
+                    else if (mainAlchemistDexterity <= mainAlchemistAgility && mainAlchemistDexterity <= mainAlchemistStrength && mainAlchemistDexterity <= mainAlchemistIntelligence && mainAlchemistDexterity <= mainAlchemistWisdom && mainAlchemistDexterity <= mainAlchemistCharisma)
+                    {
+                        mainAlchemistDexterity++;
+                        totalAttributePoints--;
+                    }
+                    else if (mainAlchemistIntelligence <= mainAlchemistAgility && mainAlchemistIntelligence <= mainAlchemistStrength && mainAlchemistIntelligence <= mainAlchemistDexterity && mainAlchemistIntelligence <= mainAlchemistWisdom && mainAlchemistIntelligence <= mainAlchemistCharisma)
+                    {
+                        mainAlchemistIntelligence++;
+                        totalAttributePoints--;
+                    }
+                    else if (mainAlchemistWisdom <= mainAlchemistAgility && mainAlchemistWisdom <= mainAlchemistStrength && mainAlchemistWisdom <= mainAlchemistDexterity && mainAlchemistWisdom <= mainAlchemistIntelligence && mainAlchemistWisdom <= mainAlchemistCharisma)
+                    {
+                        mainAlchemistWisdom++;
+                        totalAttributePoints--;
+                    }
+                    else if (mainAlchemistCharisma <= mainAlchemistAgility && mainAlchemistCharisma <= mainAlchemistStrength && mainAlchemistCharisma <= mainAlchemistDexterity && mainAlchemistCharisma <= mainAlchemistIntelligence && mainAlchemistCharisma <= mainAlchemistWisdom)
+                    {
+                        mainAlchemistCharisma++;
+                        totalAttributePoints--;
+                    }
+                }
+
+                // Shows Attributes
+                Console.WriteLine(@"  ░             ░ ", Color.FromArgb(143, 255, 194));
+                Console.WriteLine(@" /|\-----------/|\", Color.FromArgb(113, 228, 165));
+                Console.WriteLine(@" ||| Agi. -> " + mainAlchemistAgility + " |||", Color.FromArgb(88, 211, 143));
+                Console.WriteLine(@" ||| Str. -> " + mainAlchemistStrength + " |||", Color.FromArgb(72, 194, 127));
+                Console.WriteLine(@" ||| Dex. -> " + mainAlchemistDexterity + " |||", Color.FromArgb(58, 175, 111));
+                Console.WriteLine(@" ||| Int. -> " + mainAlchemistIntelligence + " |||", Color.FromArgb(46, 150, 92));
+                Console.WriteLine(@" ||| Wis. -> " + mainAlchemistWisdom + " |||", Color.FromArgb(34, 131, 77));
+                Console.WriteLine(@" ||| Chr. -> " + mainAlchemistCharisma + " |||", Color.FromArgb(24, 109, 62));
+                Console.WriteLine(@" \|/-----------\|/", Color.FromArgb(16, 88, 48));
+                Console.WriteLine(@"  ░             ░ ", Color.FromArgb(11, 61, 33));
+
+                Console.WriteLine(" "); // |-| Line Break |-|
             }
-        }
+        } 
     }
 }
