@@ -8,7 +8,7 @@ namespace Alchemist
 {
     public class Helmet 
     {
-        Helmet (string cHelmetName, int cHelmetArmor)
+        public Helmet (string cHelmetName, int cHelmetArmor)
         {
             helmetName = cHelmetName;
             helmetArmor = cHelmetArmor;
