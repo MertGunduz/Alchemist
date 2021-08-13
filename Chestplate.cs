@@ -16,6 +16,5 @@ namespace Alchemist
 
         public string chestplateName;
         public int chestplateArmor;
-
     }
 }
