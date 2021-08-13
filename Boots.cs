@@ -14,7 +14,7 @@ namespace Alchemist
             bootsArmor = cBootsArmor;
         }
 
-        string bootsName;
-        int bootsArmor;
+        public string bootsName;
+        public int bootsArmor;
     }
 }
