@@ -24,6 +24,11 @@ namespace Alchemist
         static int mainAlchemistIntelligence;
         static int mainAlchemistWisdom;
         static int mainAlchemistCharisma;
+        static int mainAlchemistHealth;
+        static int mainAlchemistMana;
+        static int mainAlchemistAttackDamage;
+        static int mainStandardAlchemistHealth = 150;
+        static int mainStandardAlchemistMana = 100;
 
         // | Alchemist Enum Data |
         static string mainAlchemistRace;
@@ -438,6 +443,28 @@ namespace Alchemist
                 Console.WriteLine(@"  ░             ░ ", Color.FromArgb(11, 61, 33));
 
                 Console.WriteLine(" "); // |-| Line Break |-|
+
+                // Sets The Alchemist Health 
+                mainAlchemistHealth = (mainAlchemistAgility * 3) + (mainAlchemistStrength * 6) + (mainAlchemistDexterity * 2) + mainStandardAlchemistHealth;
+                mainAlchemistMana = (mainAlchemistIntelligence * 4) + (mainAlchemistWisdom * 7) + mainStandardAlchemistMana;
+                mainAlchemistAttackDamage = (mainAlchemistAgility * 2) + (mainAlchemistStrength * 4) + (mainAlchemistDexterity * 3) + (mainAlchemistCharisma * 2);
+
+                Console.WriteLine(@"  ░                     ░ ", Color.FromArgb(143, 255, 194));
+                Console.WriteLine(@" /|\-------------------/|\", Color.FromArgb(113, 228, 165));
+                Console.WriteLine(@" ||| Alchemist Created |||", Color.FromArgb(88, 211, 143));
+                Console.WriteLine(@" \|/-------------------\|/", Color.FromArgb(72, 194, 127));
+                Console.WriteLine(@"  ░                     ░ ", Color.FromArgb(58, 175, 111));
+
+                Console.WriteLine(" "); // |-| Line Break |-|
+
+                // Creates A Directory (Alchemist)
+                string dirPath = @"C:\Alchemist";
+                Directory.CreateDirectory(dirPath);
+
+                // Creates The Text File Into Alchemist Directory
+                string textFilePath = @"C:\Alchemist\" + mainAlchemistName + "_Data.txt"; 
+                FileStream fileStream = File.Create(textFilePath);
+                
             }
         }
     }
