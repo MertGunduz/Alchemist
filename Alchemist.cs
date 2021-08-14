@@ -8,7 +8,7 @@ namespace Alchemist
 {
     public class Alchemist 
     {
-        public Alchemist(string cAlchemistName, int cAlchemistAge, int cAlchemistHealth, int cAlchemistMana, int cAlchemistAttackDamage, int cAlchemistHeight, int cAlchemistWeight, int cAlchemistAgility, int cAlchemistStrength, int cAlchemistDexterity, int cAlchemistIntelligence, int cAlchemistWisdom, int cAlchemistCharisma, Helmet cAlchemistHelmet, Chestplate cAlchemistChestplate, Leggings cAlchemistLeggings, Boots cAlchemistBoots, Gloves cAlchemistGloves, string cAlchemistNecklace, string cAlchemistRing, string cAlchemistMeleeWeapon, string cAlchemistRangedWeapon, string cAlchemistBook, AlchemistRace cAlchemistRace)
+        public Alchemist(string cAlchemistName, int cAlchemistAge, int cAlchemistHealth, int cAlchemistMana, int cAlchemistAttackDamage, int cAlchemistHeight, int cAlchemistWeight, int cAlchemistAgility, int cAlchemistStrength, int cAlchemistDexterity, int cAlchemistIntelligence, int cAlchemistWisdom, int cAlchemistCharisma, Helmet cAlchemistHelmet, Chestplate cAlchemistChestplate, Leggings cAlchemistLeggings, Boots cAlchemistBoots, Gloves cAlchemistGloves, Necklace cAlchemistNecklace, Ring cAlchemistRing, string cAlchemistMeleeWeapon, string cAlchemistRangedWeapon, string cAlchemistBook, AlchemistRace cAlchemistRace)
         {
             alchemistName = cAlchemistName;
             alchemistAge = cAlchemistAge;
@@ -70,8 +70,8 @@ namespace Alchemist
         public Leggings alchemistLeggings;
         public Boots alchemistBoots;
         public Gloves alchemistGloves;
-        public string alchemistNecklace;
-        public string alchemistRing;
+        public Necklace alchemistNecklace;
+        public Ring alchemistRing;
 
         // Alchemist Weapon Data
         public string alchemistMeleeWeapon;
