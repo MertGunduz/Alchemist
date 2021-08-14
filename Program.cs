@@ -36,42 +36,42 @@ namespace Alchemist
 
         // |\/| Alchemist Armors |\/|
         // Helmet
-        Helmet hoodHelmet = new Helmet("Hood", 1);
-        Helmet chainHelmet = new Helmet("Chain Helmet", 5);
+        static Helmet hoodHelmet = new Helmet("Hood", 1);
+        static Helmet chainHelmet = new Helmet("Chain Helmet", 5);
 
         // Chestplace
-        Chestplate shirtChestplate = new Chestplate("Shirt", 2);
-        Chestplate chainmailChestplate = new Chestplate("Chainmail", 9);
+        static Chestplate shirtChestplate = new Chestplate("Shirt", 2);
+        static Chestplate chainmailChestplate = new Chestplate("Chainmail", 9);
 
         // Leggings
-        Leggings trousersLeggings = new Leggings("Trousers", 1);
-        Leggings chainLeggings = new Leggings("Chain Leggings", 7);
+        static Leggings trousersLeggings = new Leggings("Trousers", 1);
+        static Leggings chainLeggings = new Leggings("Chain Leggings", 7);
 
         // Boots
-        Boots leatherBoots = new Boots("Leather Boots", 2);
-        Boots chainBoots = new Boots("Chain Boots", 6);
+        static Boots leatherBoots = new Boots("Leather Boots", 2);
+        static Boots chainBoots = new Boots("Chain Boots", 6);
 
         // Gloves
-        Gloves leatherGloves = new Gloves("Leather Gloves", 2);
-        Gloves chainGloves = new Gloves("Chain Gloves", 5);
+        static Gloves leatherGloves = new Gloves("Leather Gloves", 2);
+        static Gloves chainGloves = new Gloves("Chain Gloves", 5);
 
         // Necklace
-        Necklace noneNecklace = new Necklace("None", 0);
+        static Necklace noneNecklace = new Necklace("None", 0);
 
         // Ring
-        Ring noneRing = new Ring("None", 0);
+        static Ring noneRing = new Ring("None", 0);
 
         // |\/| Alchemist Weapons |\/|
         // Melee Weapon
-        MeleeWeapon ironDaggerMeleeWeapon = new MeleeWeapon("Iron Dagger", 6);
-        MeleeWeapon ironSwordMeleeWeapon = new MeleeWeapon("Iron Sword", 11);
+        static MeleeWeapon ironDaggerMeleeWeapon = new MeleeWeapon("Iron Dagger", 6);
+        static MeleeWeapon ironSwordMeleeWeapon = new MeleeWeapon("Iron Sword", 11);
 
         // Ranged Weapon
-        RangedWeapon throwingKnifesRangedWeapon = new RangedWeapon("Throwing Knifes", 5);
-        RangedWeapon javelinRangedWeapon = new RangedWeapon("Javelin", 9);
+        static RangedWeapon throwingKnifesRangedWeapon = new RangedWeapon("Throwing Knifes", 5);
+        static RangedWeapon javelinRangedWeapon = new RangedWeapon("Javelin", 9);
 
         // Book
-        Book noviceAlchemyBook = new Book("Novice Alchemy Book", 5);
+        static Book noviceAlchemyBook = new Book("Novice Alchemy Book", 5);
 
         static void Main(string[] args)
         {
@@ -497,6 +497,7 @@ namespace Alchemist
                 Console.WriteLine(" "); // |-| Line Break |-|
 
                 // Alchemist Constructor Creation
+                Alchemist alchemist = new Alchemist(mainAlchemistName, mainAlchemistAge, mainAlchemistHealth, mainAlchemistMana, mainAlchemistAttackDamage, mainAlchemistHeight, mainAlchemistWeight, mainAlchemistAgility, mainAlchemistStrength, mainAlchemistDexterity, mainAlchemistIntelligence, mainAlchemistWisdom, mainAlchemistCharisma, hoodHelmet, shirtChestplate, trousersLeggings, leatherBoots, leatherGloves, noneNecklace, noneRing, ironDaggerMeleeWeapon, throwingKnifesRangedWeapon, noviceAlchemyBook, alchemistRace);
 
                 // Creates A Directory (Alchemist)
                 string dirPath = @"C:\Alchemist";
