@@ -79,6 +79,6 @@ namespace Alchemist
         public Book alchemistBook;
 
         // Alchemist Race Data
-        AlchemistRace alchemistRace;
+        public AlchemistRace alchemistRace;
     }
 }

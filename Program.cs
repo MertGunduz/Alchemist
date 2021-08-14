@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using System.Drawing;
 using System.IO;
 using Console = Colorful.Console;
@@ -12,7 +13,7 @@ namespace Alchemist
         Settings
     }
     class Program
-    {   
+    {
         // | Alchemist String & Int Data |
         static string mainAlchemistName;
         static int mainAlchemistAge;
@@ -499,14 +500,21 @@ namespace Alchemist
                 // Alchemist Constructor Creation
                 Alchemist alchemist = new Alchemist(mainAlchemistName, mainAlchemistAge, mainAlchemistHealth, mainAlchemistMana, mainAlchemistAttackDamage, mainAlchemistHeight, mainAlchemistWeight, mainAlchemistAgility, mainAlchemistStrength, mainAlchemistDexterity, mainAlchemistIntelligence, mainAlchemistWisdom, mainAlchemistCharisma, hoodHelmet, shirtChestplate, trousersLeggings, leatherBoots, leatherGloves, noneNecklace, noneRing, ironDaggerMeleeWeapon, throwingKnifesRangedWeapon, noviceAlchemyBook, alchemistRace);
 
+                // Alchemist Data String
+                string alchemistData = $"Alchemist Name: {alchemist.alchemistName}\nAlchemist Age: {alchemist.alchemistAge}\nAlchemist Health: {alchemist.alchemistHealth}\nAlchemist Mana: {alchemist.alchemistMana}\nAlchemist Attack Damage: {alchemist.alchemistAttackDamage}\nAlchemist Height: {alchemist.alchemistHeight}\nAlchemist Weight: {alchemist.alchemistWeight}\nAlchemist Agility: {alchemist.alchemistAgility}\nAlchemist Strength: {alchemist.alchemistStrength}\nAlchemist Dexterity: {alchemist.alchemistDexterity}\nAlchemist Intelligence: {alchemist.alchemistIntelligence}\nAlchemist Wisdom: {alchemist.alchemistWisdom}\nAlchemist Charisma: {alchemist.alchemistCharisma}\nAlchemist Helmet: {alchemist.alchemistHelmet.helmetName}\nAlchemist Chestplate: {alchemist.alchemistChestplate.chestplateName}\nAlchemist Leggings: {alchemist.alchemistLeggings.leggingsName}\nAlchemist Boots: {alchemist.alchemistBoots.bootsName}\nAlchemist Gloves: {alchemist.alchemistGloves.glovesName}\nAlchemist Necklace: {alchemist.alchemistNecklace.necklaceName}\nAlchemist Ring: {alchemist.alchemistRing.ringName}\nAlchemist Melee Weapon: {alchemist.alchemistMeleeWeapon.meleeWeaponName}\nAlchemist Ranged Weapon: {alchemist.alchemistRangedWeapon.rangedWeaponName}\nAlchemist Book: {alchemist.alchemistBook.bookName}\nAlchemist Race: {alchemist.alchemistRace}";
+
                 // Creates A Directory (Alchemist)
                 string dirPath = @"C:\Alchemist";
                 Directory.CreateDirectory(dirPath);
 
-                // Creates The Text File Into Alchemist Directory
-                string textFilePath = @"C:\Alchemist\" + mainAlchemistName + "_Data.txt"; 
-                FileStream fileStream = File.Create(textFilePath);
-                
+                // Defines The Text Path For Text File
+                string textFilePath = @"C:\Alchemist\" + mainAlchemistName + "_Data.txt";
+
+                // Writes Alchemist Data To Text File
+                using (StreamWriter streamWriter = new StreamWriter(textFilePath))
+                {
+                    streamWriter.Write(alchemistData);
+                }
             }
         }
     }
