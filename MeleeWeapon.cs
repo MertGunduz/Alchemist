@@ -8,11 +8,13 @@ namespace Alchemist
 {
     public class MeleeWeapon
     {
-        public MeleeWeapon(string cWeaponAttackDamage)
+        public MeleeWeapon(string cMeleeWeaponName, int cMeleeWeaponAttackDamage)
         {
-            weaponAttackDamage = cWeaponAttackDamage;
+            meleeWeaponName = cMeleeWeaponName;
+            meleeWeaponAttackDamage = cMeleeWeaponAttackDamage;
         }
 
-        public string weaponAttackDamage;
+        public string meleeWeaponName;
+        public int meleeWeaponAttackDamage;
     }
 }
