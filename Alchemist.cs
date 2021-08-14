@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Alchemist
+﻿namespace Alchemist
 {
-    public class Alchemist 
+    public class Alchemist
     {
         public Alchemist(string cAlchemistName, int cAlchemistAge, int cAlchemistHealth, int cAlchemistMana, int cAlchemistAttackDamage, int cAlchemistHeight, int cAlchemistWeight, int cAlchemistAgility, int cAlchemistStrength, int cAlchemistDexterity, int cAlchemistIntelligence, int cAlchemistWisdom, int cAlchemistCharisma, Helmet cAlchemistHelmet, Chestplate cAlchemistChestplate, Leggings cAlchemistLeggings, Boots cAlchemistBoots, Gloves cAlchemistGloves, Necklace cAlchemistNecklace, Ring cAlchemistRing, MeleeWeapon cAlchemistMeleeWeapon, RangedWeapon cAlchemistRangedWeapon, Book cAlchemistBook, AlchemistRace cAlchemistRace)
         {

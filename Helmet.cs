@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Alchemist
+﻿namespace Alchemist
 {
-    public class Helmet 
+    public class Helmet
     {
-        public Helmet (string cHelmetName, int cHelmetArmor)
+        public Helmet(string cHelmetName, int cHelmetArmor)
         {
             helmetName = cHelmetName;
             helmetArmor = cHelmetArmor;
-        }   
+        }
 
         public string helmetName;
         public int helmetArmor;
