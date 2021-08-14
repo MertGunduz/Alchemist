@@ -35,7 +35,7 @@ namespace Alchemist
             alchemistBook = cAlchemistBook;
             alchemistRace = cAlchemistRace;
         }
-
+            
         public enum AlchemistRace
         {
             Human,
