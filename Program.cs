@@ -149,7 +149,7 @@ namespace Alchemist
             // Sets The Files Into String Array
             string[] files = Directory.GetFiles(filePath);
 
-            // Process Data
+            // Datas For Processing
             int repeatBackSlash = 0;
             string rawText = "";
             bool isWrite = true;
