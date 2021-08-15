@@ -5,12 +5,6 @@ using Console = Colorful.Console;
 
 namespace Alchemist
 {
-    enum Menu
-    {
-        CreateCharacter,
-        PlayGame,
-        Settings
-    }
     class Program
     {
         // | Alchemist String & Int Data |
