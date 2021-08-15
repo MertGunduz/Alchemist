@@ -78,7 +78,7 @@ namespace Alchemist
         Enemy undeadShieldmanEnemy = new Enemy(3, "Undead Shieldman", 120, 10, 10, Enemy.Rarity.Uncommon);
         Enemy undeadBerserkerEnemy = new Enemy(4, "Undead Berserker", 120, 20, 30, Enemy.Rarity.Uncommon);
         Enemy undeadNecromancerEnemy = new Enemy(5, "Undead Necromancer", 90, 200, 40, Enemy.Rarity.Rare);
-  
+
 
         static void Main(string[] args)
         {
@@ -127,7 +127,7 @@ namespace Alchemist
                 // Clears Console & Makes The Game Menu
                 Console.Clear();
 
-                Console.WriteLine("");
+                StartGame();
             }
             else if (menuChoice == "create character" || menuChoice == "createcharacter" || menuChoice == "create")
             {
@@ -140,6 +140,49 @@ namespace Alchemist
 
             Console.ReadLine();
         }
+
+        private static void StartGame()
+        {
+            // Reads The Character
+            string filePath = @"C:\Alchemist";
+
+            // Sets The Files Into String Array
+            string[] files = Directory.GetFiles(filePath);
+
+            // Process Data
+            int repeatBackSlash = 0;
+            string rawText = "";
+            bool isWrite = true;
+
+            // Processed Clean Data
+            string processedText = "";
+
+            // Sets The File Name Clean
+            for (int i = 0; i < files.Length; i++)
+            {
+                // Assings File Names Into RawText
+                rawText = rawText + files[i].ToString();
+
+                for (int ii = 0; ii < rawText.Length; ii++)
+                {
+                    if (rawText[ii].ToString() == "_")
+                    {
+                        isWrite = false;
+                    }
+
+                    if (repeatBackSlash == 2 && isWrite)
+                    {
+                        processedText = processedText + rawText[ii].ToString();
+                    }
+
+                    if (rawText[ii].ToString() == @"\") // C:\Alchemist\Mert_Data.txt
+                    {
+                        repeatBackSlash++;
+                    }
+                }
+            }
+        }
+
         private static void CharacterCreation()
         {
             try
