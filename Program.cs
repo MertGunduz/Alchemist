@@ -132,7 +132,7 @@ namespace Alchemist
             else if (menuChoice == "create character" || menuChoice == "createcharacter" || menuChoice == "create")
             {
                 CharacterCreation();
-            }
+            }   
             else if (menuChoice == "settings" || menuChoice == "sett" || menuChoice == "set")
             {
                 // Settings Menu
@@ -181,6 +181,16 @@ namespace Alchemist
                     }
                 }
             }
+
+            Console.WriteLine(@"  ░                        ░ ", Color.FromArgb(143, 255, 194));
+            Console.WriteLine(@" /|\----------------------/|\", Color.FromArgb(113, 228, 165));
+            Console.WriteLine(@" ||| Entered Your Account |||", Color.FromArgb(88, 211, 143));
+            Console.WriteLine(@" \|/----------------------\|/", Color.FromArgb(72, 194, 127));
+            Console.WriteLine(@"  ░                        ░ ", Color.FromArgb(58, 175, 111));
+
+            Console.WriteLine(" "); // |-| Line Break |-|
+
+            Console.WriteLine(" Account -> " + processedText, Color.FromArgb(46, 150, 92));
         }
 
         private static void CharacterCreation()
