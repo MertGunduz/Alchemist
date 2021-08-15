@@ -78,7 +78,7 @@ namespace Alchemist
         Enemy undeadShieldmanEnemy = new Enemy(3, "Undead Shieldman", 120, 10, 10, Enemy.Rarity.Uncommon);
         Enemy undeadBerserkerEnemy = new Enemy(4, "Undead Berserker", 120, 20, 30, Enemy.Rarity.Uncommon);
         Enemy undeadNecromancerEnemy = new Enemy(5, "Undead Necromancer", 90, 200, 40, Enemy.Rarity.Rare);
-
+  
 
         static void Main(string[] args)
         {
@@ -267,10 +267,10 @@ namespace Alchemist
                 {
                     Console.WriteLine(" "); // |-| Line Break |-|
 
-                    Console.WriteLine(@" /|\------------------------------/|\");
-                    Console.WriteLine(@" ||| You Don't Have Enough Points |||");
-                    Console.WriteLine(@" ||| Remained Attribute Points: " + totalAttributePoints + " |||");
-                    Console.WriteLine(@" \|/------------------------------\|/");
+                    Console.WriteLine(@" /|\------------------------------/|\", Color.FromArgb(143, 255, 194));
+                    Console.WriteLine(@" ||| You Don't Have Enough Points |||", Color.FromArgb(113, 228, 165));
+                    Console.WriteLine(@" ||| Remained Attribute Points: " + totalAttributePoints + " |||", Color.FromArgb(88, 211, 143));
+                    Console.WriteLine(@" \|/------------------------------\|/", Color.FromArgb(72, 194, 127));
 
                     Console.WriteLine(" "); // |-| Line Break |-|
 
@@ -305,10 +305,10 @@ namespace Alchemist
                 {
                     Console.WriteLine(" "); // |-| Line Break |-|
 
-                    Console.WriteLine(@" /|\------------------------------/|\");
-                    Console.WriteLine(@" ||| You Don't Have Enough Points |||");
-                    Console.WriteLine(@" ||| Remained Attribute Points: " + totalAttributePoints + " |||");
-                    Console.WriteLine(@" \|/------------------------------\|/");
+                    Console.WriteLine(@" /|\------------------------------/|\", Color.FromArgb(143, 255, 194));
+                    Console.WriteLine(@" ||| You Don't Have Enough Points |||", Color.FromArgb(113, 228, 165));
+                    Console.WriteLine(@" ||| Remained Attribute Points: " + totalAttributePoints + " |||", Color.FromArgb(88, 211, 143));
+                    Console.WriteLine(@" \|/------------------------------\|/", Color.FromArgb(72, 194, 127));
 
                     Console.WriteLine(" "); // |-| Line Break |-|
 
@@ -343,10 +343,10 @@ namespace Alchemist
                 {
                     Console.WriteLine(" "); // |-| Line Break |-|
 
-                    Console.WriteLine(@" /|\------------------------------/|\");
-                    Console.WriteLine(@" ||| You Don't Have Enough Points |||");
-                    Console.WriteLine(@" ||| Remained Attribute Points: " + totalAttributePoints + " |||");
-                    Console.WriteLine(@" \|/------------------------------\|/");
+                    Console.WriteLine(@" /|\------------------------------/|\", Color.FromArgb(143, 255, 194));
+                    Console.WriteLine(@" ||| You Don't Have Enough Points |||", Color.FromArgb(113, 228, 165));
+                    Console.WriteLine(@" ||| Remained Attribute Points: " + totalAttributePoints + " |||", Color.FromArgb(88, 211, 143));
+                    Console.WriteLine(@" \|/------------------------------\|/", Color.FromArgb(72, 194, 127));
 
                     Console.WriteLine(" "); // |-| Line Break |-|
 
@@ -381,10 +381,10 @@ namespace Alchemist
                 {
                     Console.WriteLine(" "); // |-| Line Break |-|
 
-                    Console.WriteLine(@" /|\------------------------------/|\");
-                    Console.WriteLine(@" ||| You Don't Have Enough Points |||");
-                    Console.WriteLine(@" ||| Remained Attribute Points: " + totalAttributePoints + " |||");
-                    Console.WriteLine(@" \|/------------------------------\|/");
+                    Console.WriteLine(@" /|\------------------------------/|\", Color.FromArgb(143, 255, 194));
+                    Console.WriteLine(@" ||| You Don't Have Enough Points |||", Color.FromArgb(113, 228, 165));
+                    Console.WriteLine(@" ||| Remained Attribute Points: " + totalAttributePoints + " |||", Color.FromArgb(88, 211, 143));
+                    Console.WriteLine(@" \|/------------------------------\|/", Color.FromArgb(72, 194, 127));
 
                     Console.WriteLine(" "); // |-| Line Break |-|
 
@@ -419,10 +419,10 @@ namespace Alchemist
                 {
                     Console.WriteLine(" "); // |-| Line Break |-|
 
-                    Console.WriteLine(@" /|\------------------------------/|\");
-                    Console.WriteLine(@" ||| You Don't Have Enough Points |||");
-                    Console.WriteLine(@" ||| Remained Attribute Points: " + totalAttributePoints + " |||");
-                    Console.WriteLine(@" \|/------------------------------\|/");
+                    Console.WriteLine(@" /|\------------------------------/|\", Color.FromArgb(143, 255, 194));
+                    Console.WriteLine(@" ||| You Don't Have Enough Points |||", Color.FromArgb(113, 228, 165));
+                    Console.WriteLine(@" ||| Remained Attribute Points: " + totalAttributePoints + " |||", Color.FromArgb(88, 211, 143));
+                    Console.WriteLine(@" \|/------------------------------\|/", Color.FromArgb(72, 194, 127));
 
                     Console.WriteLine(" "); // |-| Line Break |-|
 
@@ -457,10 +457,10 @@ namespace Alchemist
                 {
                     Console.WriteLine(" "); // |-| Line Break |-|
 
-                    Console.WriteLine(@" /|\------------------------------/|\");
-                    Console.WriteLine(@" ||| You Don't Have Enough Points |||");
-                    Console.WriteLine(@" ||| Remained Attribute Points: " + totalAttributePoints + " |||");
-                    Console.WriteLine(@" \|/------------------------------\|/");
+                    Console.WriteLine(@" /|\------------------------------/|\", Color.FromArgb(143, 255, 194));
+                    Console.WriteLine(@" ||| You Don't Have Enough Points |||", Color.FromArgb(113, 228, 165));
+                    Console.WriteLine(@" ||| Remained Attribute Points: " + totalAttributePoints + " |||", Color.FromArgb(88, 211, 143));
+                    Console.WriteLine(@" \|/------------------------------\|/", Color.FromArgb(72, 194, 127));
 
                     Console.WriteLine(" "); // |-| Line Break |-|
 
