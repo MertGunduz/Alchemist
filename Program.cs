@@ -51,9 +51,11 @@ namespace Alchemist
 
         // Necklace
         static Necklace noneNecklace = new Necklace("None", 0);
+        static Necklace goldNecklace = new Necklace("Golden Necklace", 1);
 
         // Ring
         static Ring noneRing = new Ring("None", 0);
+        static Ring goldRing = new Ring("Golden Ring", 1);
 
         // |\/| Alchemist Weapons |\/|
         // Melee Weapon
