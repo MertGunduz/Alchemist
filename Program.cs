@@ -69,6 +69,17 @@ namespace Alchemist
         // Book
         static Book noviceAlchemyBook = new Book("Novice Alchemy Book", 5);
 
+        // |\/| Enemy |\/|
+        // Skeletons
+        Enemy skeletonWarriorEnemy = new Enemy(1, "Skeleton Warrior", 40, 20, 10, Enemy.Rarity.Common);
+        Enemy skeletonWizardEnemy = new Enemy(2, "Skeleton Wizard", 30, 120, 20, Enemy.Rarity.Common);
+
+        // Undeads
+        Enemy undeadShieldmanEnemy = new Enemy(3, "Undead Shieldman", 120, 10, 10, Enemy.Rarity.Uncommon);
+        Enemy undeadBerserkerEnemy = new Enemy(4, "Undead Berserker", 120, 20, 30, Enemy.Rarity.Uncommon);
+        Enemy undeadNecromancerEnemy = new Enemy(5, "Undead Necromancer", 90, 200, 40, Enemy.Rarity.Rare);
+
+
         static void Main(string[] args)
         {
             // | Console Options |

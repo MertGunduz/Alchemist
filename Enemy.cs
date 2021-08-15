@@ -8,13 +8,14 @@ namespace Alchemist
 {
     public class Enemy
     {
-        public Enemy(int cEnemyID, string cEnemyName, int cEnemyHealth, int cEnemyMana, int cEnemyAttackDamage)
+        public Enemy(int cEnemyID, string cEnemyName, int cEnemyHealth, int cEnemyMana, int cEnemyAttackDamage, Rarity cEnemyRarity)
         {
             enemyID = cEnemyID;
             enemyName = cEnemyName;
             enemyHealth = cEnemyHealth;
             enemyMana = cEnemyMana;
             enemyAttackDamage = cEnemyAttackDamage;
+            enemyRarity = cEnemyRarity;
         }
 
         // Enemy Identification
@@ -25,5 +26,18 @@ namespace Alchemist
         public int enemyHealth;
         public int enemyMana;
         public int enemyAttackDamage;
+
+        // Enum Data
+        public enum Rarity
+        {
+            Common,
+            Uncommon,
+            Rare,
+            Epic,
+            Legendary,
+            Godly
+        }
+
+        public Rarity enemyRarity;
     }
 }
