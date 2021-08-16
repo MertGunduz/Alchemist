@@ -69,17 +69,6 @@ namespace Alchemist
         // Book
         static Book noviceAlchemyBook = new Book("Novice Alchemy Book", 5);
 
-        // |\/| Enemy |\/|
-        // Skeletons
-        Enemy skeletonWarriorEnemy = new Enemy(1, "Skeleton Warrior", 40, 20, 10, Enemy.Rarity.Common);
-        Enemy skeletonWizardEnemy = new Enemy(2, "Skeleton Wizard", 30, 120, 20, Enemy.Rarity.Common);
-
-        // Undeads
-        Enemy undeadShieldmanEnemy = new Enemy(3, "Undead Shieldman", 120, 10, 10, Enemy.Rarity.Uncommon);
-        Enemy undeadBerserkerEnemy = new Enemy(4, "Undead Berserker", 120, 20, 30, Enemy.Rarity.Uncommon);
-        Enemy undeadNecromancerEnemy = new Enemy(5, "Undead Necromancer", 90, 200, 40, Enemy.Rarity.Rare);
-
-
         static void Main(string[] args)
         {
             // | Console Options |
@@ -103,13 +92,12 @@ namespace Alchemist
 
             Console.WriteLine(" "); // |-| Line Break |-|
 
-            Console.WriteLine(@"  ░                    ░ ", Color.FromArgb(88, 211, 143));
-            Console.WriteLine(@" /|\------------------/|\", Color.FromArgb(72, 194, 127));
-            Console.WriteLine(@" |||    Start Game    |||", Color.FromArgb(58, 175, 111));
-            Console.WriteLine(@" ||| Create Character |||", Color.FromArgb(46, 150, 92));
-            Console.WriteLine(@" |||     Settings     |||", Color.FromArgb(34, 131, 77));
-            Console.WriteLine(@" \|/------------------\|/", Color.FromArgb(24, 109, 62));
-            Console.WriteLine(@"  ░                    ░ ", Color.FromArgb(16, 88, 48));
+            Console.WriteLine(@"  ░                              ░ ", Color.FromArgb(88, 211, 143));
+            Console.WriteLine(@" /|\----------------------------/|\", Color.FromArgb(72, 194, 127));
+            Console.WriteLine(@" |||    Look Your Characters    |||", Color.FromArgb(58, 175, 111));
+            Console.WriteLine(@" |||    Create New Character    |||", Color.FromArgb(46, 150, 92));
+            Console.WriteLine(@" \|/----------------------------\|/", Color.FromArgb(34, 131, 77));
+            Console.WriteLine(@"  ░                              ░ ", Color.FromArgb(24, 109, 62));
 
             Console.WriteLine(" "); // |-| Line Break |-|
 
@@ -122,75 +110,101 @@ namespace Alchemist
             Console.WriteLine(" "); // |-| Line Break |-|
 
             // Menu Choice
-            if (menuChoice == "start game" || menuChoice == "startgame" || menuChoice == "start")
+            if (menuChoice == "look" || menuChoice == "look characters" || menuChoice == "look your characters" || menuChoice == "lookyourcharacters" || menuChoice == "look yourcharacters" || menuChoice == "lookyour characters" || menuChoice == "characters")
             {
                 // Clears Console & Makes The Game Menu
                 Console.Clear();
 
-                StartGame();
+                ShowCharacters();
             }
-            else if (menuChoice == "create character" || menuChoice == "createcharacter" || menuChoice == "create")
+            else if (menuChoice == "create character" || menuChoice == "createcharacter" || menuChoice == "create" || menuChoice == "create new character" || menuChoice == "create a character" || menuChoice == "createnewcharacter")
             {
                 CharacterCreation();
-            }   
-            else if (menuChoice == "settings" || menuChoice == "sett" || menuChoice == "set")
-            {
-                // Settings Menu
             }
-
             Console.ReadLine();
         }
 
-        private static void StartGame()
+        private static void ShowCharacters()
         {
+        ShowCharacters:
+            // Picked Alchemist To Examine
+            string pickedAlchemist;
+
             // Reads The Character
             string filePath = @"C:\Alchemist";
 
             // Sets The Files Into String Array
-            string[] files = Directory.GetFiles(filePath);
+            string[] createdCharacters = Directory.GetFiles(filePath);
 
-            // Datas For Processing
-            int repeatBackSlash = 0;
-            string rawText = "";
-            bool isWrite = true;
-
-            // Processed Clean Data
+            // Clean Processed Text (Only Includes Character Name)
             string processedText = "";
 
-            // Sets The File Name Clean
-            for (int i = 0; i < files.Length; i++)
-            {
-                // Assings File Names Into RawText
-                rawText = rawText + files[i].ToString();
+            // Backslash Repeat Reader
+            int backslashRepeat = 0;
+            bool isWrite = false;
 
-                for (int ii = 0; ii < rawText.Length; ii++)
-                {
-                    if (rawText[ii].ToString() == "_")
-                    {
-                        isWrite = false;
-                    }
-
-                    if (repeatBackSlash == 2 && isWrite)
-                    {
-                        processedText = processedText + rawText[ii].ToString();
-                    }
-
-                    if (rawText[ii].ToString() == @"\") // C:\Alchemist\Mert_Data.txt
-                    {
-                        repeatBackSlash++;
-                    }
-                }
-            }
-
-            Console.WriteLine(@"  ░                        ░ ", Color.FromArgb(143, 255, 194));
-            Console.WriteLine(@" /|\----------------------/|\", Color.FromArgb(113, 228, 165));
-            Console.WriteLine(@" ||| Entered Your Account |||", Color.FromArgb(88, 211, 143));
-            Console.WriteLine(@" \|/----------------------\|/", Color.FromArgb(72, 194, 127));
-            Console.WriteLine(@"  ░                        ░ ", Color.FromArgb(58, 175, 111));
+            Console.WriteLine(@"  ░                   ░ ", Color.FromArgb(143, 255, 194));
+            Console.WriteLine(@" /|\-----------------/|\", Color.FromArgb(113, 228, 165));
+            Console.WriteLine(@" ||| Your Characters |||", Color.FromArgb(88, 211, 143));
+            Console.WriteLine(@" \|/-----------------\|/", Color.FromArgb(72, 194, 127));
+            Console.WriteLine(@"  ░                   ░ ", Color.FromArgb(58, 175, 111));
 
             Console.WriteLine(" "); // |-| Line Break |-|
 
-            Console.WriteLine(" Account -> " + processedText, Color.FromArgb(46, 150, 92));
+            // Cleans The Text & Gives The Characters
+            for (int i = 0; i < createdCharacters.Length; i++)
+            {
+                string characterPath = createdCharacters[i];
+
+                for (int ii = 0; ii < characterPath.Length; ii++)
+                {
+                    if (backslashRepeat == 2)
+                    {
+                        isWrite = true;
+                    }
+
+                    if (characterPath[ii].ToString() == @"\")
+                    {
+                        backslashRepeat++;
+                    }
+
+                    if (isWrite)
+                    {
+                        if (characterPath[ii].ToString() != "_")
+                        {
+                            processedText = processedText + characterPath[ii];
+                        }
+                        else
+                        {
+                            break;
+                        }
+                    }
+                }
+                Console.WriteLine(" |-| " + processedText + " |-|", Color.FromArgb(143, 255, 194));
+                Console.WriteLine(@" /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\", Color.FromArgb(16, 88, 48));
+                Console.WriteLine(" "); // |-| Line Break |-|
+
+                // Sets The Datas To Zero
+                isWrite = false;
+                processedText = "";
+                backslashRepeat = 0;
+            }
+
+            // Reads The Picked Alchemist & Assigns It
+            Console.Write(" Pick An Alchemist To Examine -> ");
+            pickedAlchemist = Console.ReadLine();
+
+
+            Console.WriteLine(" "); // |-| Line Break |-|
+
+            foreach (string lister in File.ReadAllLines(@"C:\Alchemist\" + pickedAlchemist + "_Data.txt"))
+            {
+                Console.WriteLine(" " + lister);
+            }
+
+            Console.WriteLine(" "); // |-| Line Break |-|
+
+            goto ShowCharacters;
         }
 
         private static void CharacterCreation()
@@ -650,8 +664,11 @@ namespace Alchemist
                 string alchemistData = $"Alchemist Name: {alchemist.alchemistName}\nAlchemist Age: {alchemist.alchemistAge}\nAlchemist Health: {alchemist.alchemistHealth}\nAlchemist Mana: {alchemist.alchemistMana}\nAlchemist Attack Damage: {alchemist.alchemistAttackDamage}\nAlchemist Height: {alchemist.alchemistHeight}\nAlchemist Weight: {alchemist.alchemistWeight}\nAlchemist Agility: {alchemist.alchemistAgility}\nAlchemist Strength: {alchemist.alchemistStrength}\nAlchemist Dexterity: {alchemist.alchemistDexterity}\nAlchemist Intelligence: {alchemist.alchemistIntelligence}\nAlchemist Wisdom: {alchemist.alchemistWisdom}\nAlchemist Charisma: {alchemist.alchemistCharisma}\nAlchemist Helmet: {alchemist.alchemistHelmet.helmetName}\nAlchemist Chestplate: {alchemist.alchemistChestplate.chestplateName}\nAlchemist Leggings: {alchemist.alchemistLeggings.leggingsName}\nAlchemist Boots: {alchemist.alchemistBoots.bootsName}\nAlchemist Gloves: {alchemist.alchemistGloves.glovesName}\nAlchemist Necklace: {alchemist.alchemistNecklace.necklaceName}\nAlchemist Ring: {alchemist.alchemistRing.ringName}\nAlchemist Melee Weapon: {alchemist.alchemistMeleeWeapon.meleeWeaponName}\nAlchemist Ranged Weapon: {alchemist.alchemistRangedWeapon.rangedWeaponName}\nAlchemist Book: {alchemist.alchemistBook.bookName}\nAlchemist Race: {alchemist.alchemistRace}";
 
                 // Creates A Directory (Alchemist)
-                string dirPath = @"C:\Alchemist";
-                Directory.CreateDirectory(dirPath);
+                if (!Directory.Exists(@"C:\Alchemist"))
+                {
+                    string dirPath = @"C:\Alchemist";
+                    Directory.CreateDirectory(dirPath);
+                }
 
                 // Defines The Text Path For Text File
                 string textFilePath = @"C:\Alchemist\" + mainAlchemistName + "_Data.txt";
