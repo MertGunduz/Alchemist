@@ -32,42 +32,57 @@ namespace Alchemist
         // Helmet
         static Helmet hoodHelmet = new Helmet("Hood", 1);
         static Helmet chainHelmet = new Helmet("Chain Helmet", 5);
+        static Helmet shadowHelmet = new Helmet("Shadow Helmet", 9);
 
         // Chestplace
         static Chestplate shirtChestplate = new Chestplate("Shirt", 2);
         static Chestplate chainmailChestplate = new Chestplate("Chainmail", 9);
+        static Chestplate shadowChestplate = new Chestplate("Shadow Chestplate", 15);
 
         // Leggings
         static Leggings trousersLeggings = new Leggings("Trousers", 1);
         static Leggings chainLeggings = new Leggings("Chain Leggings", 7);
+        static Leggings shadowLeggings = new Leggings("Shadow Leggings", 14);
 
         // Boots
         static Boots leatherBoots = new Boots("Leather Boots", 2);
         static Boots chainBoots = new Boots("Chain Boots", 6);
+        static Leggings shadowBoots = new Leggings("Shadow Boots", 13);
 
         // Gloves
         static Gloves leatherGloves = new Gloves("Leather Gloves", 2);
         static Gloves chainGloves = new Gloves("Chain Gloves", 5);
+        static Gloves shadowGloves = new Gloves("Shadow Gloves", 11);
 
         // Necklace
         static Necklace noneNecklace = new Necklace("None", 0);
         static Necklace goldNecklace = new Necklace("Golden Necklace", 1);
+        static Necklace shadowNecklace = new Necklace("Shadow Necklace", 5);
 
         // Ring
         static Ring noneRing = new Ring("None", 0);
         static Ring goldRing = new Ring("Golden Ring", 1);
+        static Ring shadowRing = new Ring("Shadow Ring", 4);
 
         // |\/| Alchemist Weapons |\/|
         // Melee Weapon
         static MeleeWeapon ironDaggerMeleeWeapon = new MeleeWeapon("Iron Dagger", 6);
         static MeleeWeapon ironSwordMeleeWeapon = new MeleeWeapon("Iron Sword", 11);
+        static MeleeWeapon barbarianAxeMeleeWeapon = new MeleeWeapon("Barbarian Axe", 15);
+        static MeleeWeapon katanaMeleeWeapon = new MeleeWeapon("Katana", 21);
+        static MeleeWeapon shadowKatanaMeleeWeapon = new MeleeWeapon("Shadow Katana", 28);
 
         // Ranged Weapon
         static RangedWeapon throwingKnifesRangedWeapon = new RangedWeapon("Throwing Knifes", 5);
         static RangedWeapon javelinRangedWeapon = new RangedWeapon("Javelin", 9);
+        static RangedWeapon hunterBowRangedWeapon = new RangedWeapon("Hunter Bow", 14);
+        static RangedWeapon crossbowRangedWeapon = new RangedWeapon("Crossbow", 18);
+        static RangedWeapon shadowSpikesRangedWeapon = new RangedWeapon("Shadow Spikes", 24);
 
         // Book
-        static Book noviceAlchemyBook = new Book("Novice Alchemy Book", 5);
+        static Book bloodAlchemyBook = new Book("Blook Alchemy Book", 5);
+        static Book undeadBook = new Book("The Book of Undead", 12);
+        static Book shadowBook = new Book("Shadow Book", 21);
 
         static void Main(string[] args)
         {
@@ -658,7 +673,7 @@ namespace Alchemist
                 Console.WriteLine(" "); // |-| Line Break |-|
 
                 // Alchemist Constructor Creation
-                Alchemist alchemist = new Alchemist(mainAlchemistName, mainAlchemistAge, mainAlchemistHealth, mainAlchemistMana, mainAlchemistAttackDamage, mainAlchemistHeight, mainAlchemistWeight, mainAlchemistAgility, mainAlchemistStrength, mainAlchemistDexterity, mainAlchemistIntelligence, mainAlchemistWisdom, mainAlchemistCharisma, hoodHelmet, shirtChestplate, trousersLeggings, leatherBoots, leatherGloves, noneNecklace, noneRing, ironDaggerMeleeWeapon, throwingKnifesRangedWeapon, noviceAlchemyBook, alchemistRace);
+                Alchemist alchemist = new Alchemist(mainAlchemistName, mainAlchemistAge, mainAlchemistHealth, mainAlchemistMana, mainAlchemistAttackDamage, mainAlchemistHeight, mainAlchemistWeight, mainAlchemistAgility, mainAlchemistStrength, mainAlchemistDexterity, mainAlchemistIntelligence, mainAlchemistWisdom, mainAlchemistCharisma, hoodHelmet, shirtChestplate, trousersLeggings, leatherBoots, leatherGloves, noneNecklace, noneRing, ironDaggerMeleeWeapon, throwingKnifesRangedWeapon, bloodAlchemyBook, alchemistRace);
 
                 // Alchemist Data String
                 string alchemistData = $"Alchemist Name: {alchemist.alchemistName}\nAlchemist Age: {alchemist.alchemistAge}\nAlchemist Health: {alchemist.alchemistHealth}\nAlchemist Mana: {alchemist.alchemistMana}\nAlchemist Attack Damage: {alchemist.alchemistAttackDamage}\nAlchemist Height: {alchemist.alchemistHeight}\nAlchemist Weight: {alchemist.alchemistWeight}\nAlchemist Agility: {alchemist.alchemistAgility}\nAlchemist Strength: {alchemist.alchemistStrength}\nAlchemist Dexterity: {alchemist.alchemistDexterity}\nAlchemist Intelligence: {alchemist.alchemistIntelligence}\nAlchemist Wisdom: {alchemist.alchemistWisdom}\nAlchemist Charisma: {alchemist.alchemistCharisma}\nAlchemist Helmet: {alchemist.alchemistHelmet.helmetName}\nAlchemist Chestplate: {alchemist.alchemistChestplate.chestplateName}\nAlchemist Leggings: {alchemist.alchemistLeggings.leggingsName}\nAlchemist Boots: {alchemist.alchemistBoots.bootsName}\nAlchemist Gloves: {alchemist.alchemistGloves.glovesName}\nAlchemist Necklace: {alchemist.alchemistNecklace.necklaceName}\nAlchemist Ring: {alchemist.alchemistRing.ringName}\nAlchemist Melee Weapon: {alchemist.alchemistMeleeWeapon.meleeWeaponName}\nAlchemist Ranged Weapon: {alchemist.alchemistRangedWeapon.rangedWeaponName}\nAlchemist Book: {alchemist.alchemistBook.bookName}\nAlchemist Race: {alchemist.alchemistRace}";
